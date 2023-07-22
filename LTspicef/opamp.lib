@@ -1,0 +1,22 @@
+*
+* Subcircuit library for PCSA of:
+*	Op_Amp ideal and Op_Amp 1 pole
+*
+
+.subckt ideal p m out params: Rin=1e9, Rout=1, A=1e9
+Rin p m {Rin} 					; input resistance
+Eout out1 0 value={A*v(p,m)} 	; open-loop voltage gain
+Rout out1 out {Rout} 			; output resistance
+.ends ideal
+
+
+.subckt onepole p m out params: Rind=2e6, halfRinCm=1e9, Rout=75, TransC=0.19e-3, R1=1.323e9, C1=100p
+Rind p m {Rind}
+RinCm1 p 0 {halfRinCm}
+RinCm2 m 0 {halfRinCm} 			; input resistances
+Gm int1 0 value={TransC*v(p,m)}
+R1 int1 0 {R1}
+C1 int1 0 {C1} 					; internal value
+Eout out1 0 value={v(int1,0)} 	; open-loop voltage gain
+Rout out1 out {Rout} 			; output resistance
+.ends onepole
