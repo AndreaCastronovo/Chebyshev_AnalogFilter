@@ -10,7 +10,7 @@ Rout out1 out {Rout} 			; output resistance
 .ends ideal
 
 
-.subckt onepole p m out params: Rind=2e6, halfRinCm=1e9, Rout=75, TransC=0.19e-3, R1=1.323e9, C1=100p
+.subckt onepole p m out params: Rind=2e6, halfRinCm=1e9, Rout=75, TransC=0.19e1, R1=132.3e3, C1=100p
 Rind p m {Rind}
 RinCm1 p 0 {halfRinCm}
 RinCm2 m 0 {halfRinCm} 			; input resistances

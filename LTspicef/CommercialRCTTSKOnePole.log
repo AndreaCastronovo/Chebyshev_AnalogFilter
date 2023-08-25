@@ -2,7 +2,7 @@ Circuit: * C:\Users\andre\Desktop\Universita\PrimoAnno\SecondoSemestre\ProgettiA
 
 Direct Newton iteration for .op point succeeded.
 
-Date: Sat Jul 22 11:41:23 2023
+Date: Fri Aug 25 22:24:10 2023
 Total elapsed time: 0.055 seconds.
 
 tnom = 27
@@ -14,7 +14,7 @@ tranpoints = 0
 accept = 0
 rejected = 0
 matrix size = 24
-fillins = 28
+fillins = 22
 solver = Normal
-Matrix Compiler1:     132 opcodes
-Matrix Compiler2: 2.11 KB object code size
+Matrix Compiler1:     113 opcodes
+Matrix Compiler2: 2.02 KB object code size
